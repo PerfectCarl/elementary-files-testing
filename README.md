@@ -1,4 +1,9 @@
-# Testing document for [pantheon-files](lp:~jeremywootten/pantheon-files/fix-crash-when-trashing)
+## Introduction 
 
-Features: 
+This document enumerates the test scenarios for [pantheon-files](https://launchpad.net/pantheon-files)
+
+## Features: 
   - [Trash](trash.md)
+
+[Changelog](CHANGELOG.md) 
+
