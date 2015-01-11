@@ -7,5 +7,5 @@ This document enumerates the test scenarios for [pantheon-files](https://launchp
   - [Samba servers](samba-servers.md)
    
   
-[Changelog](CHANGELOG.md) 
+## [Changelog](CHANGELOG.md) 
 
