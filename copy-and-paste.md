@@ -1,6 +1,6 @@
 
 ### COPY-01
-Copy and paste a file rapidly 
+Copy and paste a file multiple times quickly. 
 
 **expected**: the files are copied and the selection keeps consistent. See [#1404501][1] for more info.
 
