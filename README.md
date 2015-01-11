@@ -4,6 +4,8 @@ This document enumerates the test scenarios for [pantheon-files](https://launchp
 
 ## Test scenarios 
   - [Trash](trash.md)
-
+  - [Samba servers](samba-servers.md)
+   
+  
 [Changelog](CHANGELOG.md) 
 
