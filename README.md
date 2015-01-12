@@ -9,6 +9,7 @@ Each test scenario details the test cases.
   - [Samba servers](samba-servers.md)
   - [Clipboard functions](copy-and-paste.md)   
   - [Sidebar](sidebar.md)     
-  - 
+
+  
 ## [Changelog](CHANGELOG.md) 
 
