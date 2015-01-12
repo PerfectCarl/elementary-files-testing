@@ -7,7 +7,8 @@ Each test scenario details the test cases.
 ## Test scenarios 
   - [Trash](trash.md)
   - [Samba servers](samba-servers.md)
-   
-  
+  - [Clipboard functions](copy-and-paste.md)   
+  - [Sidebar](sidebar.md)     
+  - 
 ## [Changelog](CHANGELOG.md) 
 
