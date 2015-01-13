@@ -68,7 +68,7 @@ Copy a file with `Ctrl`+`C` and paste it with `Ctrl`+`V` to the trash folder
 ### TRASH-14
 Cut a file located in the trash with `Ctrl`+`X` and paste it with `Ctrl`+`V` to another folder
 
-**Expected:** the file is moved to the Trash
+**Expected:** the file is restored from the Trash
 
 ### TRASH-15
 Copy a file located in the trash with `Ctrl`+`C` and paste it with `Ctrl`+`V` to another folder
@@ -76,7 +76,7 @@ Copy a file located in the trash with `Ctrl`+`C` and paste it with `Ctrl`+`V` to
 **Expected:** a dialog is displayed explaining that the action can not be performed
 
 ### TRASH-16
-Delete a read only file (chmod 444)
+Delete a read only folder (chmod 444)
 
 **Expected:** a dialog is displayed explaining that the action can not be performed
 
