@@ -3,7 +3,7 @@
 ### TRASH-01
 Delete a local file with the `delete` key on the keyboard
 
-**Expected:** the file is moved to the Trash
+**Expected:** the file is moved to the trash
 
 ### TRASH-02
 Delete a local file with the `shift`+`delete` key on the keyboard
@@ -58,7 +58,7 @@ Drag a file located in the trash folder to another tab
 ### TRASH-12
 Cut a file with `Ctrl`+`X` and paste it with `Ctrl`+`V` to the trash folder
 
-**Expected:** the file is moved to the Trash
+**Expected:** the file is moved to the trash
 
 ### TRASH-13
 Copy a file with `Ctrl`+`C` and paste it with `Ctrl`+`V` to the trash folder
