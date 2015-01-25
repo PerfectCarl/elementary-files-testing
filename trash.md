@@ -8,7 +8,7 @@ Delete a local file with the `delete` key on the keyboard
 ### TRASH-02
 Delete a local file with the `shift`+`delete` key on the keyboard
 
-**Expected:** the file is moved permanently after a confirmation dialog is displayed
+**Expected:** the file is deleted permanently after a confirmation dialog is displayed
 
 ### TRASH-03
 Drag a local file to the trash bookmark with the mouse primary button
