@@ -1,3 +1,7 @@
+0.3 
+  - add selection test cases for [this review][4]
+[4]: https://code.launchpad.net/~jeremywootten/pantheon-files/fix-count-items-selected/+merge/246794
+
 0.2
   - add clipboard test cases for [this review][2]
   - add sidebar test cases for [this review][3]
