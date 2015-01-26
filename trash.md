@@ -83,12 +83,12 @@ Delete a read only folder (chmod 444)
 ### TRASH-17 
 Empty the trash with files in it
 
-**Expected:** the trash is emptied. If many files are present in the trash a dialog showing progress might be displayed
+**Expected:** the trash is emptied of files for which the user has the required permissions. If many files are present in the trash a dialog showing progress might be displayed.  If the trash empties completely (including hidden files) then the view shows an appropriate message (e.g. "This folder is empty").
 
 ### TRASH-18 
 Delete a file from the trash with the `shift`+`delete` or `delete` key
 
-**Expected:** the file is permanently deleted
+**Expected:** the file is permanently deleted if the user has the required permissions otherwise a error dialog appears.
 
 ### TRASH-19 
 Trash a file located on an external filesystem that supports trash using any of the methods listed above.
