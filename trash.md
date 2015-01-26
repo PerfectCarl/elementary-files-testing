@@ -89,3 +89,32 @@ Empty the trash with files in it
 Delete a file from the trash with the `shift`+`delete` or `delete` key
 
 **Expected:** the file is permanently deleted
+
+### TRASH-19 
+Trash a file located on an external filesystem that supports trash using any of the methods listed above.
+
+**Expected:** the file is moved to the user's trash folder on the external filesystem.  The trash icon changes to  the "not empty" state if it was previously empty.  Clicking on the trash icon displays a composite of the local and external trash directories, including the file just trashed.
+
+### TRASH-20
+Unmount a filesystem with trash folders.
+
+**Expected:** The filesystem is unmounted without emptying the trash.
+
+### TRASH-21
+Secondary-click on a the bookmark of an external filesystem with trash folders containing files.
+
+**Expected:** A context menu appears including an option to empty the trash.
+
+### TRASH-22
+Select the "Empty trash" option in test TRASH-21.  The trash on the external filesystem is emptied (files permanently deleted) but not any other trash.  If all other trash folders were empty then the state of the Trash icon changes to "Empty".
+
+## TRASH-23
+Secondary-click on a the bookmark of an external filesystem with trash folders that are empty.
+
+**Expected:** A context menu appears that does not include an option to empty the trash.
+
+## TRASH-24
+Empty the composite trash using the Trash icon or Trash view.  
+
+**Expected:** The trash on any mounted filesystem with trash folders is emptied as well as the local trash.
+
