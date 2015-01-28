@@ -118,3 +118,7 @@ Empty the composite trash using the Trash icon or Trash view.
 
 **Expected:** The trash on any mounted filesystem with trash folders is emptied as well as the local trash.
 
+## TRASH-25
+Try to rename a file in the trash byt hitting `F2` 
+
+**Expected:** nothing happens.
