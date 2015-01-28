@@ -98,27 +98,30 @@ Trash a file located on an external filesystem that supports trash using any of 
 ### TRASH-20
 Unmount a filesystem with trash folders.
 
-**Expected:** The filesystem is unmounted without emptying the trash.
+**Expected:** the filesystem is unmounted without emptying the trash.
 
 ### TRASH-21
 Secondary-click on a the bookmark of an external filesystem with trash folders containing files.
 
-**Expected:** A context menu appears including an option to empty the trash.
+**Expected:** a context menu appears including an option to empty the trash.
 
 ### TRASH-22
-Select the "Empty trash" option in test TRASH-21.  The trash on the external filesystem is emptied (files permanently deleted) but not any other trash.  If all other trash folders were empty then the state of the Trash icon changes to "Empty".
+Select the "Empty trash" option in test TRASH-21.  
 
-## TRASH-23
+**Expected:** the trash on the external filesystem is emptied (files permanently deleted) but not any other trash.  
+If all other trash folders were empty then the state of the Trash icon changes to "Empty".
+
+### TRASH-23
 Secondary-click on a the bookmark of an external filesystem with trash folders that are empty.
 
-**Expected:** A context menu appears that does not include an option to empty the trash.
+**Expected:** a context menu appears that does not include an option to empty the trash.
 
-## TRASH-24
+### TRASH-24
 Empty the composite trash using the Trash icon or Trash view.  
 
-**Expected:** The trash on any mounted filesystem with trash folders is emptied as well as the local trash.
+**Expected:** the trash on any mounted filesystem with trash folders is emptied as well as the local trash.
 
-## TRASH-25
+### TRASH-25
 Try to rename a file in the trash byt hitting `F2` 
 
 **Expected:** nothing happens.
