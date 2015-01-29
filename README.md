@@ -10,6 +10,7 @@ Each test scenario details the test cases.
   - [Clipboard functions](copy-and-paste.md)   
   - [Sidebar](sidebar.md)     
   - [Selection](selection.md)     
+  - [Renaming](rename.md)  
 
   
 ## [Changelog](CHANGELOG.md) 
