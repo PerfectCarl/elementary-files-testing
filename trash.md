@@ -31,12 +31,12 @@ Drag a file located in the trash folder to the trash bookmark with the mouse sec
 **Expected:** nothing happens
 
 ### TRASH-07
-Drag a file located in the trash folder to the trash folder opened in another window
+Drag a file located in the trash folder to the trash folder opened in another window with the mouse primary button
 
 **Expected:** nothing happens
 
 ### TRASH-08
-Drag a file located in the trash folder to another trash folder from another window
+Drag a file located in the trash folder to another trash folder from another window with the mouse secondary button
 
 **Expected:** nothing happens
 
@@ -122,6 +122,6 @@ Empty the composite trash using the Trash icon or Trash view.
 **Expected:** the trash on any mounted filesystem with trash folders is emptied as well as the local trash.
 
 ### TRASH-25
-Try to rename a file in the trash byt hitting `F2` 
+Try to rename a file in the trash by hitting `F2` 
 
 **Expected:** nothing happens.
