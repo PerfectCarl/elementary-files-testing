@@ -80,10 +80,15 @@ Delete a read only folder (chmod 444)
 
 **Expected:** a dialog is displayed explaining that the action can not be performed
 
-### TRASH-17 
-Empty the trash with files in it
+### TRASH-17a 
+Open the trash view when there are trashed files.
 
-**Expected:** the trash is emptied of files for which the user has the required permissions. If many files are present in the trash a dialog showing progress might be displayed.  If the trash empties completely (including hidden files) then the view shows an appropriate message (e.g. "This folder is empty").
+**Expected:** The view displays a composite of all accessible trash folders. An infobar is displayed including a suitable message and a button marked "Empty the Trash".
+
+### TRASH-17b 
+Click the button marked "Empty the Trash" in the trash view when there are trashed files.
+
+**Expected:** the trash is emptied of files for which the user has the required permissions, that is when the user has write and execute permissions on the trash folder in which the file resides. If many files are present in the trash, a dialog showing progress might be displayed.  If the trash empties completely (including hidden files) then the view shows an appropriate message (e.g. "This folder is empty") and the infobar is hidden.
 
 ### TRASH-18 
 Delete a file from the trash with the `shift`+`delete` or `delete` key
