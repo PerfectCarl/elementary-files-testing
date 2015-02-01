@@ -3,22 +3,22 @@
 ### TRASH-01
 Delete a local file with the `delete` key on the keyboard
 
-**Expected:** the file is moved to the trash
+**Expected:** the file is moved to the trash. The action can be undone with Ctrl-Z.
 
 ### TRASH-02
 Delete a local file with the `shift`+`delete` key on the keyboard
 
-**Expected:** the file is deleted permanently after a confirmation dialog is displayed
+**Expected:** the file is deleted permanently after a confirmation dialog is displayed. The action cannot be undone with Ctrl-Z.
 
 ### TRASH-03
 Drag a local file to the trash bookmark with the mouse primary button
 
-**Expected:** the cursor displays the "move overlay" when overlapping the trash bookmark. The file is moved to the trash
+**Expected:** the cursor displays the "move overlay" when overlapping the trash bookmark. The file is moved to the trash. The action can be undone with Ctrl-Z.
 
 ### TRASH-04
 Drag a local file to the trash folder opened in another window  with the mouse primary button
 
-**Expected:** the cursor displays the "move overlay" when overlapping the trash bookmark. The file is moved to the trash
+**Expected:** the cursor displays the "move overlay" when overlapping the trash bookmark. The file is moved to the trash. The action can be undone with Ctrl-Z.
 
 ### TRASH-05
 Drag a file located in the trash folder to the trash bookmark with the mouse primary button
@@ -48,32 +48,32 @@ Drag a file located in the trash folder to another tab opened to the trash folde
 ### TRASH-10
 Drag a file located in the trash folder to a bookmark
 
-**Expected:** the cursor displays the "move overlay" and the file is restored
+**Expected:** the cursor displays the "move overlay" and the file is restored. The action can be undone with Ctrl-Z.
 
 ### TRASH-11
-Drag a file located in the trash folder to another tab
+Drag a file located in the trash folder to another tab and drop onto the view (not the tab).
 
-**Expected:** the cursor displays the "move overlay" and the file is restored
+**Expected:** The view switches to the tab hovered over. The cursor displays the "move overlay" while the over the view itself. When dropped, the file is restored. The action can be undone with Ctrl-Z (the tabs are not switched back).
 
 ### TRASH-12
 Cut a file with `Ctrl`+`X` and paste it with `Ctrl`+`V` to the trash folder
 
-**Expected:** the file is moved to the trash
+**Expected:** the file is moved to the trash.  The action can be undone with Ctrl-Z.
 
 ### TRASH-13
 Copy a file with `Ctrl`+`C` and paste it with `Ctrl`+`V` to the trash folder
 
-**Expected:** a dialog is displayed explaining that the action can not be performed
+**Expected:** a dialog is displayed explaining that the action can not be performed aand the file is not trashed.
 
 ### TRASH-14
 Cut a file located in the trash with `Ctrl`+`X` and paste it with `Ctrl`+`V` to another folder
 
-**Expected:** the file is restored from the Trash
+**Expected:** the file is restored from the Trash. The action can be undone with Ctrl-Z.
 
 ### TRASH-15
 Copy a file located in the trash with `Ctrl`+`C` and paste it with `Ctrl`+`V` to another folder
 
-**Expected:** a dialog is displayed explaining that the action can not be performed
+**Expected:** a dialog is displayed explaining that the file cannot be copied and will be cut instead. The file is restored from trash.  The action can be undone with Ctrl-Z.
 
 ### TRASH-16
 Delete a read only folder (chmod 444)
@@ -88,12 +88,12 @@ Open the trash view when there are trashed files.
 ### TRASH-17b 
 Click the button marked "Empty the Trash" in the trash view when there are trashed files.
 
-**Expected:** the trash is emptied of files for which the user has the required permissions, that is when the user has write and execute permissions on the trash folder in which the file resides. If many files are present in the trash, a dialog showing progress might be displayed.  If the trash empties completely (including hidden files) then the view shows an appropriate message (e.g. "This folder is empty") and the infobar is hidden.
+**Expected:** A dialog appears warning that all the files in **all** trash folders, including any on external media will be permanently deleted. The trash is emptied of files for which the user has the required permissions, that is when the user has write and execute permissions on the trash folder in which the file resides. If many files are present in the trash, a dialog showing progress might be displayed.  If the trash empties completely (including hidden files) then the view shows an appropriate message (e.g. "This folder is empty") and the infobar is hidden.  The action cannot be undone with Ctrl-Z.
 
 ### TRASH-18 
 Delete a file from the trash with the `shift`+`delete` or `delete` key
 
-**Expected:** the file is permanently deleted if the user has the required permissions otherwise a error dialog appears.
+**Expected:** the file is permanently deleted if the user has the required permissions otherwise a error dialog appears.  The action cannot be undone with Ctrl-Z.
 
 ### TRASH-19 
 Trash a file located on an external filesystem that supports trash using any of the methods listed above.
@@ -103,7 +103,7 @@ Trash a file located on an external filesystem that supports trash using any of 
 ### TRASH-20
 Unmount a filesystem with trash folders.
 
-**Expected:** the filesystem is unmounted without emptying the trash.
+**Expected:** the filesystem is unmounted without emptying the trash. Note: the composite trash view still displays trashed files on the external filesystem but attempts to delete or restore them fail with an error dialog.
 
 ### TRASH-21
 Secondary-click on a the bookmark of an external filesystem with trash folders containing files.
