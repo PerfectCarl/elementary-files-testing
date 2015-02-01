@@ -23,16 +23,16 @@ Rename a bookmark to an empty string
 **expected**: the renaming operation is cancelled and the old name is used instead
 
 ### SIDE-04
-Remove the bookmark file `~/.config/gtk-3.0/bookmarks` while File is closed.  Open Files.
+Remove the bookmark file `~/.config/gtk-3.0/bookmarks` while Files is closed.  Open Files.
 
 **expected**: the bookmark file is re-created containing the user special directories.
 
 ### SIDE-05
-Remove the bookmark file `~/.config/gtk-3.0/bookmarks` while File is open.  Close and open Files.
+Remove the bookmark file `~/.config/gtk-3.0/bookmarks` while Files is open.  Close and open Files.
 
 **expected**: the bookmark file is re-created containing the user special directories.
 
 ### SIDE-06
-Remove the folder `~/.config/gtk-3.0` while File is closed.  Open Files.
+Remove the folder `~/.config/gtk-3.0` while Files is closed.  Open Files.
 
-**expected**: the folder and the bookmark file is re-created containing the user special directories.
+**expected**: the folder is recreated and the bookmark file is re-created therein, containing the user special directories.
