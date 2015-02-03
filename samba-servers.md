@@ -5,25 +5,25 @@ Testing requires access to at least one accessible Samba server on the local net
 ### SAMBA-01
 Click on the `Entire Network` bookmark in the sidebar.
 
-**Expected:** The view shows a folder item for each samba server detected on the network.  In addition a folder named 'Windows Network' is displayed.
+**Expected:** The view shows an icon for each samba server detected on the network. Other types of server may also appear. In addition a folder named 'Windows Network' is displayed.
 
 ### SAMBA-02
-Click on the `Windows Network` folder item in the Network view.
+Click on the `Windows Network` an icon in the Network view.
 
-**Expected:** The view shows a folder item for each Windows workgroup detected (usually named WORKGROUP).
+**Expected:** The view shows an icon for each Windows workgroup detected (usually named WORKGROUP).
 
 ### SAMBA-03
-Click on the folder item for the workgroup containing the test server.
+Click on the icon for the workgroup containing the test server.
 
-**Expected:** The view shows a folder item for each server detected in the workgroup, including the test server.
+**Expected:** The view shows an icon for each server detected in the workgroup, including the test server.
 
 ### SAMBA-04
-Click on the folder item representing the test server, either in the Entire Network view or in the Workgroup view.
+Click on the icon representing the test server, either in the Entire Network view or in the Workgroup view.
 
-**Expected:** The view shows a folder item for each share expected on the test server.
+**Expected:** The view shows an icon for each share expected on the test server.
 
 ### SAMBA-05
-Click on the public test share.
+Click on the public test share icon.
 
 **Expected:** The share is mounted and a bookmark with an eject button appears in the sidebar under the Network category. The view shows the folders and files contained in the shared folder. Files are not thumbnailed.
 
@@ -42,3 +42,112 @@ Click the eject button next to a mounted share.
 
 **Expected:** The share is unmounted; the view shows the user's home folder.
 
+### SAMBA-09
+Type 'network://' into the pathbar and press `Enter` or the `Navigate` icon.
+
+**Expected:** The view shows an icon for each samba server detected on the network. Other types of server may also appear. In addition a folder named 'Windows Network' is displayed. 
+
+### SAMBA-10
+Type 'smb://' into the pathbar and press `Enter` or the `Navigate` icon.
+
+**Expected:** The view shows a folder named 'Windows Network'.
+
+### SAMBA-11
+In network view (network://), secondary click on a samba server icon.
+
+**Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additional options.
+
+### SAMBA-12
+In network view (network://), secondary click on a Windows Network icon.
+
+**Expected** A context menu appears showing a limited number of options including:  `Open in` and `Properties`.  Plugins might add additional options.
+
+### SAMBA-13
+In the samba server context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
+
+**Expected** The shares available on the server are displayed in (a) a new tab (b) a new window. 
+
+### SAMBA-14
+In the Windows Network context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
+
+**Expected** The Windows domains (workgroups) available on the network are displayed in (a) a new tab (b) a new window. 
+
+### SAMBA-15
+In Windows Network view (smb://), secondary click on a domain (workgroup) icon.
+
+**Expected** A context menu appears showing a limited number of options including:  `Open in` and `Properties`.  Plugins might add additional options.
+
+### SAMBA-16
+In the domain (workgroup) context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
+
+**Expected** The samba servers available in the domain (workgroup) are displayed in (a) a new tab (b) a new window.
+
+### SAMBA-17a
+In the samba server context menu, click on ``Bookmark`.
+
+**Expected** A bookmark is created named 'Windows shares on [NAME OF SERVER]'
+
+### SAMBA-17b
+Click on the bookmark created in SAMBA-17a
+
+**Expected** A view showing the shared folders available on that samba server is shown.
+
+### SAMBA-17c
+Close and re-open Files.
+
+** Expected ** The bookmark created in SAMBA-17a persists and continues to function.
+
+### SAMBA-18a
+In the domain/workgroup context menu, click on ``Bookmark`.
+
+**Expected** A bookmark is created named 'Windows shares on [NAME ON DOMAIN]'
+
+### SAMBA-18b
+Click on the bookmark created in SAMBA-18a
+
+**Expected** A view showing the servers available on that domain is shown.
+
+### SAMBA-18c
+Close and re-open Files.
+
+** Expected ** The bookmark created in SAMBA-18a persists and continues to function.
+
+### SAMBA-19
+In a samba server view, secondary-click on a public or password-protected share icon.
+
+**Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additional options.
+
+### SAMBA-20
+In the samba share context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
+
+**Expected** The share is mounted and a bookmark with an eject button appears in the sidebar under the Network category.  A view showing the folders and files contained in the shared folder appears in (a) a new tab (b) a new window.
+
+### SAMBA-21a
+In the samba share context menu, click on ``Bookmark`.
+
+**Expected**  A bookmark is created named '[NAME OF SHARE] on [NAME OF SERVER]'
+
+### SAMBA-21b
+Click on the bookmark created in SAMBA-21a
+
+**Expected** The share is mounted and a bookmark with an eject button appears in the sidebar under the Network category.  The view shows the folders and files contained in the shared folder. If the share is password-protected then a dialog first appears as described under SAMBA-06.
+
+### SAMBA-21c
+Unmount the share, close and re-open Files.
+
+** Expected ** The bookmark created in SAMBA-21a persists and continues to function.
+
+### SAMBA-22
+In the samba server context menu, click on `Properties`.
+
+** Expected **  (TO BE DECIDED/IMPLEMENTED)
+
+### SAMBA-23
+In the Windows Network context menu, click on `Properties`.
+
+** Expected **  (TO BE DECIDED/IMPLEMENTED)
+
+### SAMBA-24
+In the domain/workgroup context menu, click on `Properties`.
+
+** Expected **  (TO BE DECIDED/IMPLEMENTED)
