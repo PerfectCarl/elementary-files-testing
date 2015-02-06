@@ -169,9 +169,46 @@ Drag a file from the local folder to the samba shared folder using the primary b
 **Expected**  As for tests 25(a) and 25(b)
 
 ### SAMBA-26
-
 Repeat test SAMBA-25 using tabs instead of windows.
 
 **Expected** As for SAMBA-25.
+
+### SAMBA-27
+(a) Copy a file from a local to samba shared folder using Ctrl-C and Ctrl-V to copy the file
+
+**Expected** The file is copied and the views update.
+
+(b) Move a file from a local to samba shared folder using Ctrl-X and Ctrl-V to move the file
+
+**Expected** The file is moved and the views update.
+
+(c) Repeat SAMBA-27 (a) and (b) copying/moving from shared to local folder.
+
+(d) Repeat SAMBA-27 (a) and (b) copying/moving from shared to shared folder.
+
+### SAMBA-28
+(a) Open a samba shared folder (with write access).  Select one file item. Secondary-click and choose the `Rename` option, or press `F2`.
+
+**Expected** The file item enters rename mode.
+
+(b) Rename the file with a valid name and press `Enter`
+
+**Expected** The file id renamed and the view refreshes to show the new name.
+
+### SAMBA-29
+Select a folder within a samba share.  Select `Open in` > `New Tab` from context menu.
+
+**Expected** A new tab opens at the specified folder.
+
+### SAMBA-30
+Select a folder within a samba share.  Select `Open in` > `New Window` from context menu.
+
+**Expected** A new window opens at the specified folder.
+
+### SAMBA-31
+Select a folder within a samba share.  Select `Open in` > `New Terminal` from context menu.
+
+**Expected** A terminal window opens at the specified folder.
+
 
 
