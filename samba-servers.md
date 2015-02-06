@@ -210,5 +210,27 @@ Select a folder within a samba share.  Select `Open in` > `New Terminal` from co
 
 **Expected** A terminal window opens at the specified folder.
 
+### SAMBA-32
+Navigate to a samba server.  Secondary-click on a shared folder.
 
+**Expected** The context menu displays `Open in`, `Bookmark` and `Properties` items.  If the clipboard holds a file it displays a `Paste into Folder` item.  It does not display `Cut`, `Copy` or `Delete` items.  The `Open in` submenu contains `New Tab` and `New Window` items.
 
+### SAMBA-33
+Navigate to a samba server.  Secondary-click on the background.
+
+**Expected** The context menu displays `Open in`, `Bookmark` `Show hidden` and `Properties` items.  Even if the clipboard holds a file it does not display a `Paste` item.  It does not display `Cut`, `Copy` or `Delete` items. The `Open in` submenu contains `New Tab` and `New Window` items.
+
+### SAMBA-34
+Navigate to a samba shared folder.  Secondary-click on the background.
+
+**Expected** The context menu displays `Open in`, `New`, `Sort by`, `Bookmark` `Show hidden` and `Properties` items.  If the clipboard holds a file it displays a `Paste` item.  It does not display `Cut`, `Copy` or `Delete` items. The `Open in` submenu contains `New Tab`, `New Window` `Terminal` items and items for applicable applications.  The `New` submenu contains `Empty File` and `Folder` items.
+
+### SAMBA-35
+Navigate to a samba shared folder. Secondary-click on a folder within it.
+
+**Expected** The context menu displays the same items as for a local folder except that the `Move to Trash` item is changed to `Delete permanently`.
+
+### SAMBA-36
+Navigate to a samba shared folder. Secondary-click on a file within it.
+
+**Expected** The context menu displays the same items as for a local file of the same type except that the `Move to Trash` item is changed to `Delete permanently`.
