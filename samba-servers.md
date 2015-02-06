@@ -135,19 +135,43 @@ Click on the bookmark created in SAMBA-21a
 ### SAMBA-21c
 Unmount the share, close and re-open Files.
 
-** Expected ** The bookmark created in SAMBA-21a persists and continues to function.
+**Expected** The bookmark created in SAMBA-21a persists and continues to function.
 
 ### SAMBA-22
 In the samba server context menu, click on `Properties`.
 
-** Expected **  (TO BE DECIDED/IMPLEMENTED)
+**Expected**  (TO BE DECIDED/IMPLEMENTED)
 
 ### SAMBA-23
 In the Windows Network context menu, click on `Properties`.
 
-** Expected **  (TO BE DECIDED/IMPLEMENTED)
+**Expected**  (TO BE DECIDED/IMPLEMENTED)
 
 ### SAMBA-24
 In the domain/workgroup context menu, click on `Properties`.
 
-** Expected **  (TO BE DECIDED/IMPLEMENTED)
+**Expected**  (TO BE DECIDED/IMPLEMENTED)
+
+### SAMBA-25
+Open a local folder in one window and a public samba shared folder in another window.
+
+(a)
+Drag a file from the local folder to the samba shared folder using the primary button.
+
+**Expected**  The file is copied to the samba shared folder.  If the transfer takes more than approximately 1 second, a progress dialog is displayed.  The views refresh to show the changes.
+
+(b) Drag a file from the local folder to the samba shared folder using the secondary button.
+
+**Expected**  A menu is displayed giving the choices `Move here`, `Copy here` and `Cancel`.  On selecting an option the file is moved or copied as expected. `A Link here` option should not be displayed. The views refresh to show the changes.
+
+(c) Repeat tests (a) and (b) dragging from the remote folder to the local folder.
+
+**Expected**  As for tests 25(a) and 25(b)
+
+### SAMBA-26
+
+Repeat test SAMBA-25 using tabs instead of windows.
+
+**Expected** As for SAMBA-25.
+
+
