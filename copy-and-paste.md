@@ -13,6 +13,11 @@ Copy and paste a selection of files multiple times in a quick succession (using 
 
 **expected**: the files are copied and only one of set of the selection is selected at any time (the last copy of the file).
 
+### COPY-03
+Copy a read only file (using `Ctrl`+`C`).  Paste into another folder (using `Ctrl-V`).
+
+**expected**: An error dialog is displayed with detail 'Permission denied'.
+
 ## Trash related test cases 
 
 ### [TRASH-12](trash.md#trash-12)
