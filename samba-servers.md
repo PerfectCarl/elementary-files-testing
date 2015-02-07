@@ -1,6 +1,8 @@
 ## Test cases for accessing remote samba servers
 
-Testing requires access to at least one accessible Samba server on the local network.  That server should provide at least one public share and one password-protected share.  The server should be in the default workgroup 'WORKGROUP' and broadcast its presence on the network. All other Samba configuration settings are assumed to be such as to not prevent the tests from succeeding. Single-click mode is assumed (otherwise double-clicking will be required for some actions). Depending on the speed of the network and the number of servers some delay may be experienced in refreshing the network view.
+Testing requires access to at least one accessible Samba server on the local network.  That server should provide at least one public share and one password-protected share.  The server should be in the default workgroup 'WORKGROUP' and broadcast its presence on the network. All other Samba configuration settings are assumed to be such as to not prevent the tests from succeeding. Single-click mode is assumed (otherwise double-clicking will be required for some actions). Depending on the speed of the network and the number of servers some delay may be experienced in refreshing the network view.  It is assumed that the password to the remote samba server has not already been stored locally at the start of testing (see test 06).
+
+The functioning of additional plugin context menu items with samba servers is outside the scope of this test suite.  See test suites for individual plugins.
 
 ### SAMBA-01
 Click on the `Entire Network` bookmark in the sidebar.
@@ -28,17 +30,34 @@ Click on the public test share icon.
 **Expected:** The share is mounted and a bookmark with an eject button appears in the sidebar under the Network category. The view shows the folders and files contained in the shared folder. Files are not thumbnailed.
 
 ### SAMBA-06
-Click on the password protected share.
+Click on the password protected test share icon.
 
-**Expected:** A dialog appears requesting entry of Username, Domain (Workgroup) and Password.  The first two are pre-filled with the current user name and default workgroup.  In addition, the dialog gives three options for the password: Forget immediately, remember until logout and remember forever.
+**Expected:** A dialog appears requesting entry of Username, Domain (Workgroup) and Password.  The first two are pre-filled with the current user name and default workgroup.  In addition, the dialog gives three options for the password: `Forget password immediately`, `Remember until you logout` and `Remember forever`.
+
 
 ### SAMBA-07
-Complete the dialog with valid credentials for the test share and press `Connect`.
+(a) Complete the dialog with valid credentials for the test share, selecting `Forget immediately`, and press `Connect`.
 
 **Expected:** The share is mounted and a bookmark with an eject button appears in the sidebar under the Network category.  The view shows the folders and files contained in the shared folder.
 
+(b) Eject the share as per SAMBA-08 and then repeat SAMBA-06.
+
+**Expected** The password dialog reappears.
+
+(c) Remount the share as per SAMBA-07 (a) but select `Remember until you logout`.  Eject the share and remount as before.
+
+**Expected** The share mounts without requiring password entry.
+
+(d) Eject the share, close Files, log out, log back in, restart Files.  Mount the password share as before.
+
+**Expected** The password dialog appears as in SAMBA-06.
+
+(e) At the password dialog, click `Cancel`.
+
+**Expected** The dialog closes and the view shows 'This does not belong to you ... You do not have permission to view this folder' message.
+
 ### SAMBA-08
-Click the eject button next to a mounted share.
+Click the eject button next to the mounted password-protected share.
 
 **Expected:** The share is unmounted; the view shows the user's home folder.
 
@@ -60,7 +79,7 @@ In network view (network://), secondary click on a samba server icon.
 ### SAMBA-12
 In network view (network://), secondary click on a Windows Network icon.
 
-**Expected** A context menu appears showing a limited number of options including:  `Open in` and `Properties`.  Plugins might add additional options.
+**Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additional options.
 
 ### SAMBA-13
 In the samba server context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
@@ -75,7 +94,7 @@ In the Windows Network context menu, click on `Open in` and then (a) `New Tab` (
 ### SAMBA-15
 In Windows Network view (smb://), secondary click on a domain (workgroup) icon.
 
-**Expected** A context menu appears showing a limited number of options including:  `Open in` and `Properties`.  Plugins might add additional options.
+**Expected** A context menu appears showing a limited number of options including:  `Open in`,`Bookmark` and `Properties`.  Plugins might add additional options.
 
 ### SAMBA-16
 In the domain (workgroup) context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
@@ -218,12 +237,12 @@ Navigate to a samba server.  Secondary-click on a shared folder.
 ### SAMBA-33
 Navigate to a samba server.  Secondary-click on the background.
 
-**Expected** The context menu displays `Open in`, `Bookmark` `Show hidden` and `Properties` items.  Even if the clipboard holds a file it does not display a `Paste` item.  It does not display `Cut`, `Copy` or `Delete` items. The `Open in` submenu contains `New Tab` and `New Window` items.
+**Expected** The context menu displays `Open in`, `Bookmark` and `Properties` items.  Even if the clipboard holds a file it does not display a `Paste` item.  It does not display `Cut`, `Copy` or `Delete` items. The `Open in` submenu contains `New Tab` and `New Window` items.
 
 ### SAMBA-34
 Navigate to a samba shared folder.  Secondary-click on the background.
 
-**Expected** The context menu displays `Open in`, `New`, `Sort by`, `Bookmark` `Show hidden` and `Properties` items.  If the clipboard holds a file it displays a `Paste` item.  It does not display `Cut`, `Copy` or `Delete` items. The `Open in` submenu contains `New Tab`, `New Window` `Terminal` items and items for applicable applications.  The `New` submenu contains `Empty File` and `Folder` items.
+**Expected** The context menu displays `Open in`, `New`, `Sort by`, `Bookmark` `Show hidden` and `Properties` items.  If the clipboard holds a file it displays a `Paste` item.  It does not display `Cut`, `Copy` or `Delete` items. The `Open in` submenu contains `New Tab`, `New Window` `Terminal` items and items for applicable applications.  The `New` submenu contains `Empty File` and `Folder` items; if the user Template special folder contains templates these are also added as items to the `New` submenu.
 
 ### SAMBA-35
 Navigate to a samba shared folder. Secondary-click on a folder within it.
