@@ -6,22 +6,22 @@ The copy, cut and paste actions can be carried out either using the keyboard (Ct
 ### COPY-01
 Copy a single local file and paste into another local folder that is open in another window.
 
-**Expected** The file is copied into the destination folder. When the file has been created, a corresponding file icon appears in the view of the destination folder and is selected.
+**Expected** The file is copied into the destination folder. When the file has been created, a corresponding file icon appears in the view of the destination folder and is selected.  The operation can be undone with Ctrl-Z and redone with Ctrl-Shift-Z.
 
 ### COPY-02
 Copy a single local folder and paste into another local folder that is open in another window.
 
-**Expected** The folder and all files and folders contained therein are copied into the destination folder. When the folder has been created, a corresponding file icon appears in the view of the destination folder and is selected.  If the contents of the folder are large, a progress dialog appears with an option to cancel.  Cancelling the transfer leaves any folders and files that have already been created in place.
+**Expected** The folder and all files and folders contained therein are copied into the destination folder. When the folder has been created, a corresponding file icon appears in the view of the destination folder and is selected.  If the contents of the folder are large, a progress dialog appears with an option to cancel.  Cancelling the transfer leaves any folders and files that have already been created in place.   The operation can be undone with Ctrl-Z and redone with Ctrl-Shift-Z if it was not cancelled.
 
 ### COPY-03
 Repeat tests 01 and 02 using a multiple selection of files and folders.
 
-**Expected** The selection is copied to the destination and all items are selected.
+**Expected** The selection is copied to the destination and all items are selected.   The operation can be undone with Ctrl-Z and redone with Ctrl-Shift-Z.
 
 ### COPY-04
 Repeat tests 01, 02 and 03 using a destination on a remote samba server.
 
-**Expected** The selection is copied to the destination and the remote folder view is refreshed.
+**Expected** The selection is copied to the destination and the remote folder view is refreshed.   The operation can be undone with Ctrl-Z and redone with Ctrl-Shift-Z.
 
 ### COPY-05
 Copy and paste a file multiple times in a quick succession (using `Ctrl`+`V`). 
