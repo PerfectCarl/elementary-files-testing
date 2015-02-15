@@ -59,7 +59,7 @@ Click on the password protected test share icon.
 ### SAMBA-08
 Click the eject button next to the mounted password-protected share.
 
-**Expected:** The share is unmounted; the view shows the user's home folder.
+**Expected:** The eject button becomes a spinner. Provided there are no open files on the share, the share is unmounted and the spinner and bookmark disappear; the view shows the user's home folder.  If files are being held open then a gvfs dialog appears listing the applications blocking unmounting of the share. The Files eject operation times out after a certain delay, in which case the bookmark remains with the eject button.
 
 ### SAMBA-09
 Type 'network://' into the pathbar and press `Enter` or the `Navigate` icon.
@@ -79,7 +79,7 @@ In network view (network://), secondary click on a samba server icon.
 ### SAMBA-12
 In network view (network://), secondary click on a Windows Network icon.
 
-**Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additional options.
+**Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additiunmountingonal options.
 
 ### SAMBA-13
 In the samba server context menu, click on `Open in` and then (a) `New Tab` (b) `New Window`.
