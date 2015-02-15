@@ -38,7 +38,17 @@ Copy and paste a selection of files multiple times in a quick succession (using 
 ### COPY-07
 Copy a read only file (using `Ctrl`+`C`).  Paste into another folder (using `Ctrl-V`).
 
-**expected**: An error dialog is displayed with detail 'Permission denied'.
+**expected**:  The file is copied into the other folder (copying does not involve opening the file for writing).
+
+### COPY-08
+Copy a file without read access (using `Ctrl`+`C`).  Paste into another folder (using `Ctrl-V`).
+
+**expected**:  A dialog with the message "Permission denied" is shown.  The file is not copied.
+
+### COPY-09
+Copy a file and paste into a read-only folder.
+
+**expected** A dialog with the message "Cannot copy file here" with other details is shown.
 
 ## Trash related test cases 
 
