@@ -106,10 +106,15 @@ Trash a file located on an external filesystem that does not support trash using
 
 **Expected:** a dialog confirming _permanent_ deletion of the file appears.
 
-### TRASH-20
+### TRASH-20a
 Unmount a filesystem with trash folders.
 
 **Expected:** the filesystem is unmounted without emptying the trash. The composite trash view no longer displays trashed files on the external filesystem.
+
+### TRASH-20b
+Remount a filesystem with trash folders containing trashed files.
+
+**Expected:** The composite trash view re-displays trashed files on the external filesystem.
 
 ### TRASH-21
 Secondary-click on a the bookmark of an external filesystem with trash folders containing files.
