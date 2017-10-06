@@ -10,7 +10,7 @@ Click on the `Entire Network` bookmark in the sidebar.
 **Expected:** The view shows an icon for each samba server detected on the network. Other types of server may also appear. In addition a folder named 'Windows Network' is displayed.
 
 ### SAMBA-02
-Click on the `Windows Network` an icon in the Network view.
+Click on the `Windows Workgroup` an icon in the Network view.
 
 **Expected:** The view shows an icon for each Windows workgroup detected (usually named WORKGROUP).
 
@@ -69,7 +69,7 @@ Type 'network://' into the pathbar and press `Enter` or the `Navigate` icon.
 ### SAMBA-10
 Type 'smb://' into the pathbar and press `Enter` or the `Navigate` icon.
 
-**Expected:** The view shows a folder named 'Windows Network'.
+**Expected:** The view shows a folder named 'Windows Workgroup'.
 
 ### SAMBA-11
 In network view (network://), secondary click on a samba server icon.
@@ -77,7 +77,7 @@ In network view (network://), secondary click on a samba server icon.
 **Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additional options.
 
 ### SAMBA-12
-In network view (network://), secondary click on a Windows Network icon.
+In network view (network://), secondary click on a Windows Workgroup icon.
 
 **Expected** A context menu appears showing a limited number of options including:  `Open in`, `Bookmark` and `Properties`.  Plugins might add additiunmountingonal options.
 
@@ -102,7 +102,7 @@ In the domain (workgroup) context menu, click on `Open in` and then (a) `New Tab
 **Expected** The samba servers available in the domain (workgroup) are displayed in (a) a new tab (b) a new window.
 
 ### SAMBA-17a
-In the samba server context menu, click on ``Bookmark`.
+In the samba server context menu, click on `Bookmark`.
 
 **Expected** A bookmark is created named 'Windows shares on [NAME OF SERVER]'
 
@@ -117,7 +117,7 @@ Close and re-open Files.
 ** Expected ** The bookmark created in SAMBA-17a persists and continues to function.
 
 ### SAMBA-18a
-In the domain/workgroup context menu, click on ``Bookmark`.
+In the domain/workgroup context menu, click on `Bookmark`.
 
 **Expected** A bookmark is created named 'Windows shares on [NAME ON DOMAIN]'
 
@@ -142,7 +142,7 @@ In the samba share context menu, click on `Open in` and then (a) `New Tab` (b) `
 **Expected** The share is mounted and a bookmark with an eject button appears in the sidebar under the Network category.  A view showing the folders and files contained in the shared folder appears in (a) a new tab (b) a new window.
 
 ### SAMBA-21a
-In the samba share context menu, click on ``Bookmark`.
+In the samba share context menu, click on `Bookmark`.
 
 **Expected**  A bookmark is created named '[NAME OF SHARE] on [NAME OF SERVER]'
 
@@ -162,7 +162,7 @@ In the samba server context menu, click on `Properties`.
 **Expected**  (TO BE DECIDED/IMPLEMENTED)
 
 ### SAMBA-23
-In the Windows Network context menu, click on `Properties`.
+In the Windows Workgroup context menu, click on `Properties`.
 
 **Expected**  (TO BE DECIDED/IMPLEMENTED)
 
@@ -212,7 +212,7 @@ Repeat test SAMBA-25 using tabs instead of windows.
 
 (b) Rename the file with a valid name and press `Enter`
 
-**Expected** The file id renamed and the view refreshes to show the new name.
+**Expected** The file is renamed and the view refreshes to show the new name.
 
 ### SAMBA-29
 Select a folder within a samba share.  Select `Open in` > `New Tab` from context menu.
