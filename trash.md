@@ -95,10 +95,16 @@ Delete a file from the trash with the `shift`+`delete` or `delete` key
 
 **Expected:** the file is permanently deleted if the user has the required permissions otherwise a error dialog appears.  The action cannot be undone with Ctrl-Z.
 
-### TRASH-19 
+### TRASH-19a 
 Trash a file located on an external filesystem that supports trash using any of the methods listed above.
 
 **Expected:** the file is moved to the user's trash folder on the external filesystem.  The trash icon changes to  the "not empty" state if it was previously empty.  Clicking on the trash icon displays a composite of the local and external trash directories, including the file just trashed.
+
+
+### TRASH-19b 
+Trash a file located on an external filesystem that does not support trash using any of the methods listed above.
+
+**Expected:** a dialog confirming _permanent_ deletion of the file appears.
 
 ### TRASH-20
 Unmount a filesystem with trash folders.
