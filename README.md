@@ -5,13 +5,15 @@ This document enumerates the test scenarios for [pantheon-files](https://launchp
 Each test scenario details the test cases.
 
 ## Test scenarios 
-  - [Trash](trash.md)
-  - [Samba servers](samba-servers.md)
   - [Clipboard functions](copy-and-paste.md)   
-  - [Sidebar](sidebar.md)     
-  - [Selection](selection.md)     
+  - [Sidebar](sidebar.md)   
+  - [Pathbar](pathbar.md)
+  - [Selection](selection.md)    
+  - [Drag and Drop](dnd.md)   
   - [Renaming](rename.md)  
-
+  - [Trash](trash.md)
+  - [Multi-Window](multiwindow.md)   
+  - [Samba servers](samba-servers.md)
   
 ## [Changelog](CHANGELOG.md) 
 
