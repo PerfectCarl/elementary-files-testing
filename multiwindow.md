@@ -36,3 +36,8 @@ Open one tab, not being "Home".  Drag tab to make another window.
 
 **Expected** A single ViewContainer destruct message is printed (until the app is closed), as the dragged tab is destroyed and a new Home tab is recreated in the first window.
 
+### MULTIWINDOW-04
+Create two windows with the second window showing a subdirectory of the folder in the first window.  Delete (trash) the subdirectory using the first window.
+
+**Expected** The second window updates to show the parent of the subdirectory. The second window continues to function normally with respect to mode changes, DnD etc.
+
