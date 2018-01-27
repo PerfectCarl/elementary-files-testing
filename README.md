@@ -14,6 +14,7 @@ Each test scenario details the test cases.
   - [Trash](trash.md)
   - [Multi-Window](multiwindow.md)   
   - [Samba servers](samba-servers.md)
+  - [Activate file](activate.md)
   
 ## [Changelog](CHANGELOG.md) 
 
