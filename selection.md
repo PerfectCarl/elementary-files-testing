@@ -1,14 +1,24 @@
 ## Test cases for the item selection
 
-### SELECT-01
+### SELECT-01a
 Select files (and only files) in the icon view and Miller column view
 
 **Expected:** When the mouse is hovered over any of the selected files, an overlay is displayed at the bottom on the window with the selected file count and the sum of the file sizes
 
-### SELECT-02
-Select folders (and only folders ) in the icon view and Miller column view
+### SELECT-01b
+Select files (and only files) in the icon view and Miller column view in the bottom end corner or the view and hover the mouse over the selection.
+
+**Expected:** The overlay appears in the opposite corner, or moves to the opposite corner when the pointer enters it (continuing any ongoing count).
+
+### SELECT-02a
+Select two or more folders (and only folders ) in the icon view and Miller column view
 
 **Expected:** When the mouse is hovered over any of the selected files, an overlay is displayed at the bottom on the window with the selected folder count
+
+### SELECT-02b
+Select one folder in the icon view and Miller column view
+
+**Expected:** When the mouse is hovered over the selected folder, an overlay is displayed at the bottom on the window with the subfolder count and file count within the folder and the total size. An 'in progress' animation appears until the data is ready.
 
 ### SELECT-03
 Select folders and files in the icon view and Miller column view
